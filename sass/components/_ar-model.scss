@@ -41,6 +41,7 @@
     top: 50%;
     width: max-content;
     text-align: left;
+    border-radius: 20px;
   }
 
   .HotspotAnnotation p {
@@ -50,12 +51,16 @@
   }
 
   .HotspotAnnotation h2 {
+    color: #E89B36;
+    text-align: center;
     font-size: 18px;
     margin-bottom: 5px;
   }
 
   .HotspotAnnotation img {
-    max-width: 250px;
+    margin-left: 30%;
+    max-width: 100px;
+    max-height: 100px;
   }
 
   model-viewer::part(default-progress-bar) {

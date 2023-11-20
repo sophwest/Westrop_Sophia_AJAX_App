@@ -12,6 +12,9 @@
     <!-- link to greensock main library and scroll plugin -->
   </head>
   <body>
+
+    <div id="error-box" class="col=span-full"><h2 id="error-msg"></h2><p id="the-error"></p></div>
+
     <div class="grid-con">
       <div class="col-span-full">
         <model-viewer id="model" src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/earbuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
@@ -44,7 +47,7 @@
         </model-viewer>
       </div>
 
-      <div class="col-span-full">
+      <div id= "material-con" class="col-span-full">
         <h2>Materials</h2>
         <ul id="material-list"><!-- copies of template will be dumped here --></ul>
 
