@@ -23,6 +23,14 @@ p {
   font-size: 16px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.material-heading {
+  color: #E89B36;
+}
+
 model-viewer {
   width: auto;
   max-width: 1200px;
@@ -63,6 +71,7 @@ model-viewer {
   top: 50%;
   width: max-content;
   text-align: left;
+  border-radius: 20px;
 }
 
 .HotspotAnnotation p {
@@ -72,12 +81,16 @@ model-viewer {
 }
 
 .HotspotAnnotation h2 {
+  color: #E89B36;
+  text-align: center;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
 .HotspotAnnotation img {
-  max-width: 250px;
+  margin-left: 30%;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 model-viewer::part(default-progress-bar) {
@@ -149,4 +162,32 @@ model-viewer[ar-status=session-started] > #ar-prompt {
 
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
+}
+
+#error-box {
+  display: none;
+  z-index: 100;
+  background-color: #222222;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #E89B36;
+}
+
+#the-error {
+  text-align: center;
+  margin: 0;
+  margin-left: 20px;
+  color: #fff;
+}
+
+#error-msg {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+#material-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

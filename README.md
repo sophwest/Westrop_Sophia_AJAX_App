@@ -18,6 +18,16 @@ sophwest / Sophia Westrop
 
 sophwest / Sophia Westrop   
 
+## Misc Credits  
+
+Utkarsh Verma - SVG spinner (https://github.com/n3r4zzurr0/svg-spinners)  
+Hotspot images from SVG Repo :  
+(https://www.svgrepo.com/svg/502769/mic-off)  
+(https://www.svgrepo.com/svg/437628/ear)   
+(https://www.svgrepo.com/svg/514817/audio-spectrum-analyzer)  
+(https://www.svgrepo.com/svg/532831/battery-bolt)    
+
+
 ## License  
 
 MIT
