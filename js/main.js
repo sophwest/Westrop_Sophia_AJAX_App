@@ -69,29 +69,40 @@
   function loadInfoBoxes() {
 
     //make AJAX call here
-    // use fetch with url: https://swiftpixel.com/earbud/api/infoboxes
+    fetch("https://swiftpixel.com/earbud/api/infoboxes")
+    .then(response => response.json())
+    .then(infoBox => {
+      console.log(infoBox);
 
-    infoBoxes.forEach((infoBox, index) => {
-      let selected = document.querySelector(`#hotspot-${index+1}`);
-      
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = infoBox.title;
+      infoBox.forEach((infoBox, index) => {
+        let selected = document.querySelector(`#hotspot-${index+1}`);
+        
+        const titleElement = document.createElement('h2');
+        titleElement.textContent = infoBox.heading;
 
-      const textElement = document.createElement('p');
-      textElement.textContent = infoBox.text;
+        const textElement = document.createElement('p');
+        textElement.textContent = infoBox.description;
 
-      selected.appendChild(titleElement);
-      selected.appendChild(textElement);
-    });
+        const img = document.createElement("img");
+        img.src = infoBox.thumbnail;
+
+        selected.appendChild(img);
+        selected.appendChild(titleElement);
+        selected.appendChild(textElement);
+      })
+    })
+    .catch(error => console.error(error));
   }
   loadInfoBoxes();
 
   function loadMaterialInfo() {
     // make AJAX call here 
-    // use fetch with url: https://swiftpixel.com/earbud/api/materials
-
+    fetch("https://swiftpixel.com/earbud/api/materials")
+    .then(response => response.json())
+    .then(materials => {
+      console.log(materials);
     // this will go inside a promise/ .then()
-    materialListData.forEach(material => {
+      materials.forEach(material => {
       // make a copy of the template 
       const clone = materialTemplate.content.cloneNode(true);
 
@@ -105,6 +116,8 @@
       // append the populated template to the ul
       materialList.appendChild(clone);
     })
+  })
+  .catch(error => console.error(error));
   }
   loadMaterialInfo();
 
